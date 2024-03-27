@@ -123,6 +123,7 @@
 <style>
   :global(body) {
     background-color: whitesmoke;
+    align-items: center;
   }
   .header-container {
     margin-top: 100px;
