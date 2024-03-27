@@ -124,11 +124,9 @@
   :global(body) {
     background-color: whitesmoke;
   }
-  div {
-    align-items: center;
-  }
   .header-container {
     margin-top: 100px;
+    margin-bottom: 50px;
     top: 0;
     left: 0;
     width: 100%;
@@ -151,6 +149,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    margin-left: 220px;
   }
   .col-wrapper {
     position: relative;
