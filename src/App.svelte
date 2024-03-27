@@ -149,7 +149,6 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    align-self: center;
   }
   .col-wrapper {
     position: relative;
