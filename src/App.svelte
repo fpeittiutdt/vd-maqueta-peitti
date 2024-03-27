@@ -123,6 +123,8 @@
 <style>
   :global(body) {
     background-color: whitesmoke;
+  }
+  div {
     align-items: center;
   }
   .header-container {
