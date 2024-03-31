@@ -1,5 +1,5 @@
 <script>
-  let numbers = [10, 25, 33, 62, 75, 100];
+  let numbers = [10, 25, 33, 50, 62, 75, 100];
   // binding: atar una variable a algo visual
   function adjustRGB(x) {
     var red = x > 25 ? Math.min(Number(x * (230 / 75)), 255) : 0;
@@ -104,7 +104,7 @@
                   n
                 )[2]})"
               />
-              <path d="M36 34H41.5V61H36V34Z" fill="whitesmoke" />
+              <path d="M36 34H41.5V61H36V34Z" fill="black" />
             </svg>
           {/if}
         </div>
@@ -122,11 +122,11 @@
 
 <style>
   :global(body) {
-    background-color: whitesmoke;
+    background-color: black;
   }
   .header-container {
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     top: 0;
     left: 0;
     width: 100%;
@@ -134,7 +134,7 @@
   h1 {
     color: lightsteelblue;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 64px;
+    font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
@@ -148,11 +148,10 @@
   .column-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    margin-left: 220px;
+    justify-content: center;
   }
   .col-wrapper {
     position: relative;
-    width: 175px;
+    width: 150px;
   }
 </style>
