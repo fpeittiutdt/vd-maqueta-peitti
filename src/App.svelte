@@ -1,11 +1,11 @@
 <script>
-  let numbers = [10, 25, 33, 50, 62, 75, 100];
+  let numbers = [10, 25, 33, 62, 75, 100];
   // binding: atar una variable a algo visual
   function adjustRGB(x) {
-    var red = x > 25 ? Math.min(Number(x * (230 / 75)), 255) : 0;
+    var red = x >= 25 ? Math.min(Number(x * (230 / 75)), 255) : 0;
     var green =
-      x > 25
-        ? Number(191 - (116 / 75) * (x - 25))
+      x >= 25
+        ? Math.max(Number(191 - (116 / 75) * (x - 25)), 0)
         : Math.min(Number(191 + x * (116 / 75)), 255);
     var blue =
       x > 25
@@ -28,7 +28,7 @@
   <div class="column-container">
     {#each numbers as n}
       <div class="col-wrapper">
-        <div>
+        <div style="background-color:black">
           {#if n < 50}
             <svg
               width="126"
@@ -104,7 +104,7 @@
                   n
                 )[2]})"
               />
-              <path d="M36 34H41.5V61H36V34Z" fill="black" />
+              <path d="M36 34H41.5V61H36V34Z" fill="#000000" />
             </svg>
           {/if}
         </div>
@@ -122,7 +122,8 @@
 
 <style>
   :global(body) {
-    background-color: black;
+    background-image: url(../public/images/wallpaper.png);
+    background-size: 1320px;
   }
   .header-container {
     margin-top: 100px;
