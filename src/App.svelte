@@ -18,7 +18,7 @@
 </script>
 
 <main>
-  <div class="header-container">
+  <div class="header-container" style="background-color:black">
     <h1>Pronóstico de la semana</h1>
   </div>
 
