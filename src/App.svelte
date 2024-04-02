@@ -2,15 +2,12 @@
   let numbers = [10, 25, 33, 62, 75, 100];
   // binding: atar una variable a algo visual
   function adjustRGB(x) {
-    var red = x >= 25 ? Math.min(Number(x * (230 / 75)), 255) : 0;
+    var red = x >= 25 ? Number(x * (230 / 75)) : 0;
     var green =
       x >= 25
-        ? Math.max(Number(191 - (116 / 75) * (x - 25)), 0)
-        : Math.min(Number(191 + x * (116 / 75)), 255);
-    var blue =
-      x > 25
-        ? Math.min(Number(232 - (x - 25) * 2.5), 0)
-        : Math.min(Number(232 + x * 2.5), 255);
+        ? Number(191 - (116 / 75) * (x - 25))
+        : Number(191 + x * (116 / 75));
+    var blue = x > 25 ? Number(232 - (x - 25) * 2.5) : Number(232 + x * 2.5);
 
     return [red, green, blue];
   }
@@ -27,8 +24,8 @@
 
   <div class="column-container">
     {#each numbers as n}
-      <div class="col-wrapper">
-        <div style="background-color:black">
+      <div class="col-wrapper" style="background-color:black">
+        <div>
           {#if n < 50}
             <svg
               width="126"
